@@ -35,6 +35,8 @@ class Heap:
       return None
 
   def update(self, index, value):
+    if index < 0 or index >= self.size:
+      return None
     oldValue = self.array[index]
     self.array[index] = value
     if value > oldValue:
